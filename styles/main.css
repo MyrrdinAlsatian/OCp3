@@ -1,16 +1,247 @@
-.section-title{
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section-title {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 60px;
 }
+
 .section-title h1 {
     font-size: 12px;
     letter-spacing: 14px;
     color: #ed145b;
     margin-top: 15px;
 }
-.section-title h2{
+
+.section-title h2 {
     font-size: 46px;
     color: #000;
     margin: 0;
+}
+
+.btn.btn-default {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #8a8a8a;
+    padding: 0;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+/*
+    gallery
+*/
+
+.video-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 310px;
+    overflow: hidden;
+}
+
+.video-content .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -45px;
+    margin-left: -33px;
+}
+
+.video-overlay {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(237, 20, 91, .7);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.gallery-section .nav-tabs {
+    background-color: #fff;
+    border-bottom: 0;
+    padding: 25px 15px;
+    margin-bottom: 25px;
+}
+
+.gallery-section .nav-tabs>li {
+    width: 25%;
+}
+
+.gallery-section .nav>li>a {
+    padding: 0 10px;
+    color: #000;
+    display: block;
+}
+
+.gallery-section .nav-tabs>li>a {
+    margin-right: 0;
+    border: 0;
+}
+
+.gallery-section .gallery-image {
+    position: relative;
+    max-width: 110px;
+    max-height: 110px;
+    overflow: hidden;
+}
+
+.gallery-section .nav-tabs a h5 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 15px;
+}
+
+/*
+    Schedule
+*/
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(237, 20, 91, .7);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.festival-info {
+    background-color: #f7f7f7;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.festival-image {
+    float: left;
+    max-width: 115px;
+    max-height: 110px;
+    margin-right: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.festival-info .time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -48px;
+    text-align: center;
+    color: #fff;
+    font-size: 38px;
+}
+
+.festival-image .time h1 {
+    margin-top: 15px;
+    font-size: 36px;
+}
+
+.festival-info .time span {
+    font-size: 16px;
+    letter-spacing: 8px;
+    font-family: allerbold;
+    display: block;
+}
+
+.festival-info .text-left {
+    float: left;
+}
+
+.festival-info .text-right {
+    padding-right: 60px;
+    padding-top: 50px;
+}
+
+.festival-info h2 {
+    color: #000;
+    font-family: allerbold;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.festival-info h5 {
+    display: inline;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*
+    news
+*/
+
+.entry-post {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.entry-title {
+    margin: 20px 0;
+}
+
+.entry-title h1,
+.entry-title a {
+    font-size: 34px;
+    line-height: 34px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.post-content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 45px;
+    padding-bottom: 50px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.post-content .time {
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    background-color: #ed145b;
+}
+
+.post-content .time time {
+    font-size: 34px;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.post-content .time time span {
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.post-icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(237, 20, 91, .5);
 }
