@@ -381,6 +381,16 @@ section {
     color: var(--white);
 }
 
+.prog-section .row>div[class^="col-"] {
+    border: var(--primary) solid 1px;
+    border-top: none;
+    border-bottom: none;
+}
+
+.prog-section .row>div[class^="col-"]:not(:last-of-type) {
+    border-right: none;
+}
+
 
 /*
     Schedule
@@ -802,4 +812,13 @@ section {
     min-width: 120px;
     font-weight: 700;
     font-size: 14px;
+}
+/*
+    Footer
+*/
+
+footer p > a{
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 600;
 }
