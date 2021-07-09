@@ -194,8 +194,8 @@ section {
 }
 
 #countdown li p {
-    font-size: 18px;
-    /* font-size: calc(11px + 7 * ((100vw - 20rem) / 1080)); */
+    /* font-size: 18px; */
+    font-size: calc(11px + 7 * ((100vw - 20rem) / 1080));
     line-height: 0;
     margin-top: 42px;
     color: var(--white);
@@ -427,14 +427,18 @@ section {
     overflow: hidden;
     margin-bottom: 30px;
 }
-
 .festival-image {
     float: left;
+    max-height: 100%;
     max-width: 115px;
-    max-height: 110px;
-    margin-right: 25px;
     position: relative;
     overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+    .festival-image {
+        max-width: 115px;
+        margin-right: 25px;
+    }
 }
 
 .festival-info .time {
