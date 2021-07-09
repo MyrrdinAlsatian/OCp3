@@ -429,15 +429,17 @@ section {
 }
 .festival-image {
     float: left;
-    max-height: 100%;
-    max-width: 115px;
+    max-height: 105px;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
+    filter:brightness(0.8)
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
     .festival-image {
         max-width: 115px;
         margin-right: 25px;
+        filter: none;
     }
 }
 
@@ -762,8 +764,8 @@ section {
 }
 
 .section-padding {
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top: calc(20px + 40 * ((100vw - 80rem) / 1920));;
+    padding-bottom: calc(20px + 30 * ((100vw - 80rem) / 1920));;
 }
 
 .artist-info {
