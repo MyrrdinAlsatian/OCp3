@@ -48,11 +48,11 @@ a:active {
     margin-left: 1.5em;
 }
 
-button {
+p.btn {
     text-transform: uppercase;
 }
 
-button a {
+p.btn a {
     color: var(--white)
 }
 
@@ -86,16 +86,15 @@ button a {
 */
 
 section {
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top:  calc(30px + 30 * ((100vw - 80rem) / 1920));
+    padding-bottom:  calc(25px + 25 * ((100vw - 80rem) / 1920));
 }
 
 .section-title {
-    margin-bottom: 45px;
-    padding-top: 55px;
+    padding-top: calc(20px + 25 * ((100vw - 20rem) / 1080));
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: calc(25px + 35 * ((100vw - 20rem) / 1080));
 }
 
 .section-title h1 {
@@ -108,7 +107,8 @@ section {
 }
 
 .section-title h2 {
-    font-size: calc(46px + 40 * ((100vw - 80rem) / 1920));    color: var(--dark);
+    font-size: calc(46px + 40 * ((100vw - 80rem) / 1920));
+    color: var(--dark);
     margin: 0;
     font-family: var(--font-highlight);
     font-weight: 700;
@@ -206,7 +206,7 @@ section {
     About Section
 */
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 1024px) {
     .bg-section {
         background-image: url(../asset/img/bg1.png);
         background-repeat: round;
@@ -226,12 +226,12 @@ section {
 }
 
 .about-section .about-content {
-    padding-bottom: 55px;
+    padding-bottom: calc(10px + 40 * ((100vw - 20rem) / 1080));
 }
 
 .about-section .about-info {
     background: #fff;
-    padding-bottom: 87px;
+    padding-bottom:calc(25px + 62 * ((100vw - 20rem) / 1080));
 }
 
 .about-info {
@@ -266,7 +266,8 @@ section {
 
 .gallery-section,
 .about-section {
-    padding-bottom: 100px;
+    padding-bottom:  calc(40px + 60 * ((100vw - 80rem) / 1920));;
+
 }
 
 .photos-content {
@@ -308,8 +309,13 @@ section {
 .gallery-section .nav-tabs {
     background-color: #fff;
     border-bottom: 0;
-    padding: 25px 15px;
+    padding: 25px 15px 15px;
     margin-bottom: 25px;
+}
+@media screen and (min-width: 840px) {
+    .gallery-section .nav-tabs{
+        padding: 25px 15px 15px;
+    }
 }
 
 .gallery-section .nav-tabs>li {
@@ -336,7 +342,12 @@ section {
 .gallery-section .nav-tabs a h5 {
     font-size: 14px;
     line-height: 18px;
+    text-overflow: ellipsis;
     margin-top: 15px;
+    max-height: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .gallery-image:hover>.image-overlay {
@@ -426,6 +437,11 @@ section {
     display: block;
     overflow: hidden;
     margin-bottom: 30px;
+}
+@media  screen and (min-width:1024px) {
+    .festival-info{
+        margin-bottom: 18px;
+    }
 }
 .festival-image {
     float: left;
@@ -617,13 +633,13 @@ section {
 }
 
 .post-content .time {
-    width: 69px;
-    height: 69px;
+    width: 65px;
+    height: 65px;
     text-align: center;
-    background-color: var(--primary);
+    background: var(--primary);
 }
 
-.post-content .time time {
+.post-content .time time, .post-content .time p {
     font-size: 34px;
     color: #fff;
     display: block;
@@ -632,7 +648,7 @@ section {
     text-transform: uppercase;
 }
 
-.post-content .time time span {
+.post-content .time time span, .post-content .time p span  {
     font-size: 14px;
     letter-spacing: 5px;
 }
@@ -724,20 +740,6 @@ section {
     padding-bottom: 50px;
 }
 
-.post-content .time {
-    width: 65px;
-    height: 65px;
-    text-align: center;
-    background: var(--primary);
-}
-
-.post-content .time a {
-    color: var(--white);
-    display: block;
-    font-size: 34px;
-    padding: 15px;
-    text-transform: uppercase;
-}
 
 .entry-summary {
     font-size: 16px;
