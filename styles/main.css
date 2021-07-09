@@ -108,8 +108,7 @@ section {
 }
 
 .section-title h2 {
-    font-size: 46px;
-    color: var(--dark);
+    font-size: calc(46px + 40 * ((100vw - 80rem) / 1920));    color: var(--dark);
     margin: 0;
     font-family: var(--font-highlight);
     font-weight: 700;
@@ -145,7 +144,7 @@ section {
 
 .home-content h2 {
     font-size: 116px;
-    font-size: calc(76px + 40 * ((100vw - 20rem) / 1920));
+    font-size: calc(76px + 40 * ((100vw - 80rem) / 1920));
     font-family: var(--font-highlight);
     font-weight: bold;
     text-transform: uppercase;
@@ -489,6 +488,7 @@ section {
     font-weight: bold;
     margin-top: 20px;
     font-size: 30px;
+    font-size: calc(20px + 10 * ((100vw - 80rem) / 1920));
 }
 
 .festival-info h5 {
