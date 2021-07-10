@@ -367,8 +367,9 @@ section {
     left: 0;
     width: 100%;
     color: #fff;
-    padding: 50px;
+    padding: 30px;
 }
+
 
 .gallery-info .title a {
     font-size: 34px;
@@ -438,7 +439,7 @@ section {
     overflow: hidden;
     margin-bottom: 30px;
 }
-@media  screen and (min-width:1024px) {
+@media  screen and (min-width:1024px) and (max-width: 1439px) {
     .festival-info{
         margin-bottom: 18px;
     }
@@ -644,13 +645,13 @@ section {
     color: #fff;
     display: block;
     padding: 15px;
-    line-height: 18px;
+    line-height: 12px;
     text-transform: uppercase;
 }
 
 .post-content .time time span, .post-content .time p span  {
     font-size: 14px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 .post-icons {
@@ -702,12 +703,23 @@ section {
 .contact-info {
     background-color: #fff;
     padding: 35px;
-    max-width: 365px;
-    position: absolute;
-    top: 60%;
-    right: 8%;
-    margin-top: -197px;
     overflow: hidden;
+    display: flex;
+    overflow: hidden;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+@media screen and (min-width: 767px) {
+    .contact-info{
+        max-width: 365px;
+        top: 60%;
+        right: 8%;
+        position: absolute;
+        margin-top: -197px;
+        text-align: left;
+    }
 }
 
 .contact-info h3 {
@@ -797,12 +809,18 @@ section {
 }
 
 .artist-info .menu {
-    float: left;
     max-width: 320px;
 }
 
-.artist-info .menu.sub {
-    margin-left: 80px;
+@media screen and (min-width:1200px){
+    .artist-info .menu{
+        float: left;
+        
+    }
+    
+    .artist-info .menu.sub {
+        margin-left: 80px;
+    }
 }
 
 .artist-info .menu li {
