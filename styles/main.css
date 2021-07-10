@@ -470,7 +470,13 @@ section {
     overflow: hidden;
     margin-bottom: 30px;
 }
-@media  screen and (min-width:1024px) and (max-width: 1400px) {
+
+@media  screen and (min-width:1201px) and (max-width: 1399px) {
+    .festival-info{
+        margin-bottom: 25px;
+    }
+}
+@media  screen and (min-width:1024px) and (max-width: 1200px) {
     .festival-info{
         margin-bottom: 18px;
     }
@@ -876,6 +882,7 @@ section {
     font-family: var(--font-basic);
     font-size: 14px;
     font-weight: lighter;
+    text-align: right;
 }
 
 .artist-info .menu h5 {
@@ -883,6 +890,7 @@ section {
     min-width: 120px;
     font-weight: 700;
     font-size: 14px;
+    text-align: left;
 }
 /*
     Footer
