@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap');
 :root {
     --primary: #38C835;
@@ -75,7 +76,8 @@ p.btn a {
 }
 
 .img-fit-cover {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 100%;
     width: 100%;
 }
@@ -131,6 +133,8 @@ section {
 */
 
 .home-banner {
+    background-image: -webkit-gradient(linear, right top, left top, from(var(--darkTrans)), to(var(--darkTrans))), url(../asset/img/Banner.jpg);
+    background-image: -o-linear-gradient(right, var(--darkTrans), var(--darkTrans)), url(../asset/img/Banner.jpg);
     background-image: linear-gradient(to left, var(--darkTrans), var(--darkTrans)), url(../asset/img/Banner.jpg);
     background-size: cover;
     margin-top: 0;
@@ -168,8 +172,12 @@ section {
 
 #countdown {
     margin-bottom: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #countdown li {
@@ -236,19 +244,28 @@ section {
 
 .about-info {
     padding: 35px 55px 35px 70px;
-    font: 16px;
     line-height: 26px;
-    overflow: hidden;
     height: 100%;
-    max-height: 370px;
 }
+@media screen and (min-width: 448px) {
+    .about-info{
+        max-height: 320px;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .about-info{
+        max-height: 370px;
+    }
+}
+
 
 .about-info h3 {
     border-bottom: 1px solid #f0f1f2;
 }
 
 .about-info h3 {
-    font: 26px;
+    font-size: 26px;
     padding-bottom: 25px;
     margin-bottom: 20px;
     color: var(--dark);
@@ -256,7 +273,7 @@ section {
 
 .about-info button {
     margin-top: 20px;
-    font: 14px;
+    font-size: 14px;
 }
 
 
@@ -266,7 +283,7 @@ section {
 
 .gallery-section,
 .about-section {
-    padding-bottom:  calc(40px + 60 * ((100vw - 80rem) / 1920));;
+    padding-bottom:  calc(120px + 60 * ((100vw - 80rem) / 1920));;
 
 }
 
@@ -286,7 +303,9 @@ section {
 }
 
 .photos-content:hover .image-overlay {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
 }
 
@@ -299,10 +318,10 @@ section {
     background-color: var(--primaryTrans);
     opacity: 0;
     -webkit-transform: scale(0);
-    -moz-transform: scale(0);
     -ms-transform: scale(0);
-    -o-transform: scale(0);
     transform: scale(0);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -342,7 +361,8 @@ section {
 .gallery-section .nav-tabs a h5 {
     font-size: 14px;
     line-height: 18px;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     margin-top: 15px;
     max-height: 1em;
     white-space: nowrap;
@@ -351,7 +371,9 @@ section {
 }
 
 .gallery-image:hover>.image-overlay {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
 }
 
 .gallery-item {
@@ -387,7 +409,6 @@ section {
 
 .prog-section .days {
     background: var(--primary);
-    font-size: bold;
     font-size: 36px;
     color: var(--white);
 }
@@ -415,14 +436,22 @@ section {
     height: 100%;
     background-color: var(--primaryTrans);
     -webkit-transform: scale(0);
-    -moz-transform: scale(0);
     -ms-transform: scale(0);
-    -o-transform: scale(0);
     transform: scale(0);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .image-overlay i.far.fa-images {
@@ -430,7 +459,9 @@ section {
 }
 
 .festival-info:hover .image-overlay {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 
 .festival-info {
@@ -439,9 +470,14 @@ section {
     overflow: hidden;
     margin-bottom: 30px;
 }
-@media  screen and (min-width:1024px) and (max-width: 1439px) {
+@media  screen and (min-width:1024px) and (max-width: 1400px) {
     .festival-info{
         margin-bottom: 18px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .festival-info{
+        margin-bottom: 20px;
     }
 }
 .festival-image {
@@ -450,13 +486,15 @@ section {
     max-width: 100%;
     position: relative;
     overflow: hidden;
-    filter:brightness(0.8)
+    -webkit-filter:brightness(0.8);
+            filter:brightness(0.8)
 }
 @media screen and (min-width: 480px) {
     .festival-image {
         max-width: 115px;
         margin-right: 25px;
-        filter: none;
+        -webkit-filter: none;
+                filter: none;
     }
 }
 
@@ -469,7 +507,9 @@ section {
     text-align: center;
     color: #fff;
     font-size: 38px;
-    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+        -ms-transform: translateY(40%);
+            transform: translateY(40%);
 }
 
 .festival-image .time h1 {
@@ -577,8 +617,6 @@ section {
     height: 100%;
     background-color: var(--primaryTrans);
     -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
@@ -614,11 +652,14 @@ section {
 
 .entry-thumbnail img {
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     max-height: 580px;
     width: -webkit-fill-available;
-    object-position: top;
-    filter: brightness(0.5);
+    -o-object-position: top;
+       object-position: top;
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
 }
 
 .post-content {
@@ -705,11 +746,19 @@ section {
     background-color: #fff;
     padding: 35px;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    flex-flow: column;
-    justify-content: center;
-    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     text-align: center;
 }
 @media screen and (min-width: 767px) {
@@ -776,11 +825,6 @@ section {
 .feedback label {
     font-size: 24px;
     font-weight: bold;
-}
-
-.section-padding {
-    padding-top: calc(20px + 40 * ((100vw - 80rem) / 1920));;
-    padding-bottom: calc(20px + 30 * ((100vw - 80rem) / 1920));;
 }
 
 .artist-info {
