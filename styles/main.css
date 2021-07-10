@@ -638,6 +638,7 @@ section {
     height: 65px;
     text-align: center;
     background: var(--primary);
+    display: block;
 }
 
 .post-content .time time, .post-content .time p {
@@ -645,7 +646,7 @@ section {
     color: #fff;
     display: block;
     padding: 15px;
-    line-height: 12px;
+    line-height: 17px;
     text-transform: uppercase;
 }
 
