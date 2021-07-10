@@ -147,8 +147,8 @@ section {
 }
 
 .home-content h2 {
-    font-size: 116px;
-    font-size: calc(76px + 40 * ((100vw - 80rem) / 1920));
+    /* font-size: 116px; */
+    font-size: calc(70px + 40 * ((100vw - 80rem) / 1920));
     font-family: var(--font-highlight);
     font-weight: bold;
     text-transform: uppercase;
@@ -194,7 +194,7 @@ section {
 }
 
 #countdown li span {
-    font-size: 51px;
+    font-size: calc(45px + 40 * ((100vw - 80rem) / 1920));
     font-family: var(--font-highlight);
     font-weight: bold;
     float: left;
